@@ -1,0 +1,105 @@
+# TypoScript added by extension "cs_opengraph"
+plugin.tx_facebookopengraph {
+	meta = COA
+	meta {
+		# og:title
+		10 = TEXT
+		10 {
+			field = tx_facebookopengraph_title // title
+			stdWrap {
+				wrap = <meta property="og:title" content=" | "/>
+				required = 1
+			}
+		}
+
+		# og:type
+		20 = TEXT
+		20 {
+			data = levelfield: -1, tx_facebookopengraph_type, slide
+			stdWrap {
+				wrap = <meta property="og:type" content=" | "/>
+				required = 1
+			}
+		}
+
+		# og:site_name
+		30 = TEXT
+		30 {
+			data = levelfield: -1, tx_facebookopengraph_site_name, slide
+			stdWrap {
+				wrap = <meta property="og:site_name" content=" | "/>
+				required = 1
+			}
+		}
+
+		# og:description
+		40 = TEXT
+		40 {
+			data = levelfield: -1, tx_facebookopengraph_description, slide
+			stdWrap {
+				wrap = <meta property="og:description" content=" | "/>
+				required = 1
+			}
+		}
+
+		# og:admins
+		50 = TEXT
+		50 {
+			data = levelfield: -1, tx_facebookopengraph_admins, slide
+			stdWrap {
+				wrap = <meta property="og:admins" content=" | "/>
+				required = 1
+			}
+		}
+
+
+		60 = IMG_RESOURCE
+		60 {
+			file = GIFBUILDER
+			file {
+				XY = 200,200
+				10 = IMAGE
+				10 {
+					file {
+						import = uploads/tx_facebookopengraph/
+						import.data = levelfield: -1, tx_facebookopengraph_image, slide
+						width = 200
+						height = 200
+					}
+					offset = 200-[10.w]/2,200-[10.h]/2
+					stdWrap {
+						required = 1
+					}
+				}
+				stdWrap {
+					required = 1
+				}
+			}
+			stdWrap {
+				dataWrap = http://{getIndpEnv:HTTP_HOST}/|
+				outerWrap = <meta property="og:image" content=" | "/>
+				required = 1
+			}
+		}
+
+		# og:url
+		70 = TEXT
+		70 {
+			typolink {
+				parameter.data = TSFE:id
+				returnLast = url
+			}
+			prepend = TEXT
+			prepend {
+				data = getIndpEnv:HTTP_HOST
+				dataWrap = http:// | /
+			}
+			outerWrap = <meta property="og:url" content=" | "/>
+		}
+	}
+}
+
+[useragent = facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)]
+page.headerData.1337 >
+page.headerData.1337 < plugin.tx_facebookopengraph.meta
+[global]
