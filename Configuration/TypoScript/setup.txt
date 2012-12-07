@@ -1,4 +1,4 @@
-# TypoScript added by extension "cs_opengraph"
+# TypoScript added by extension "facebook_opengraph"
 plugin.tx_facebookopengraph {
 	meta = COA
 	meta {
