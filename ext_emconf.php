@@ -1,8 +1,8 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Facebook OpenGraph',
-	'description' => 'Extension for adding OpenGraph meta tags to pages.',
+	'title' => 'Facebook Open Graph',
+	'description' => 'Extension for adding Open Graph meta tags to pages.',
 	'category' => 'plugin',
 	'author' => 'Matthias Nitsch',
 	'author_email' => 'nitsch@clickstorm.de',
@@ -17,7 +17,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'modify_tables' => 'pages',
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
-	'version' => '0.9.1',
+	'version' => '1.0.0',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '4.7',
