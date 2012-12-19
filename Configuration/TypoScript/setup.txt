@@ -66,19 +66,12 @@ plugin.tx_facebookopengraph {
 						width = 200
 						height = 200
 					}
-					offset = 200-[10.w]/2,200-[10.h]/2
-					stdWrap {
-						required = 1
-					}
-				}
-				stdWrap {
-					required = 1
 				}
 			}
 			stdWrap {
 				dataWrap = http://{getIndpEnv:HTTP_HOST}/|
 				outerWrap = <meta property="og:image" content=" | "/>
-				required = 1
+				if.isTrue.data = levelfield: -1, tx_facebookopengraph_image, slide
 			}
 		}
 
