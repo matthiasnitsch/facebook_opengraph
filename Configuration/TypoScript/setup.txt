@@ -58,13 +58,19 @@ plugin.tx_facebookopengraph {
 			file = GIFBUILDER
 			file {
 				XY = 200,200
+				backColor = #FFFFFF
+				offset = 200-[10.w]/2,200-[10.h]/2
 				10 = IMAGE
 				10 {
 					file {
 						import = uploads/tx_facebookopengraph/
 						import.data = levelfield: -1, tx_facebookopengraph_image, slide
-						width = 200
-						height = 200
+						import.data {
+							override = {plugin.tx_facebookopengraph.defaults.image}
+							override.if.isFalse.data = levelfield: -1, tx_facebookopengraph_image, slide
+						}
+						maxW = 200
+						maxH = 200
 					}
 				}
 			}
