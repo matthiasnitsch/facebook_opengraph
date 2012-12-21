@@ -23,6 +23,7 @@ $tempColumns = Array (
 		'config' => Array (
 			'type'  => 'select',
 			'items' => array (
+				array('', ''),
 				array('LLL:EXT:facebook_opengraph/Resources/Private/Language/locallang_db.xlf:tx_facebookopengraph_type.div_activities', '--div--'),
 				array('activity', 'activity'),
 				array('sport', 'sport'),
