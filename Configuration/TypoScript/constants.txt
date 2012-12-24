@@ -1,6 +1,6 @@
 plugin.tx_facebookopengraph {
 	defaults {
-		# cat=plugin.tx_facebookopengraph/file; type=string; label=Default Image
-		image = EXT:pressebox/Resources/Public/Images/default_image.png
+		# cat=plugin.tx_facebookopengraph/file; type=file[png,jpg,gif]; label=Default Image
+		image = EXT:facebook_opengraph/Resources/Public/Images/default_image.png
 	}
 }

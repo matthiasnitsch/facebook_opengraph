@@ -62,22 +62,21 @@ plugin.tx_facebookopengraph {
 				offset = 200-[10.w]/2,200-[10.h]/2
 				10 = IMAGE
 				10 {
+					file = {$plugin.tx_facebookopengraph.defaults.image}
 					file {
-						import = uploads/tx_facebookopengraph/
-						import.data = levelfield: -1, tx_facebookopengraph_image, slide
-						import.data {
-							override = {plugin.tx_facebookopengraph.defaults.image}
-							override.if.isFalse.data = levelfield: -1, tx_facebookopengraph_image, slide
-						}
-						maxW = 200
-						maxH = 200
+					  import = uploads/tx_facebookopengraph/
+					  import {
+						data = levelfield: -1, tx_facebookopengraph_image, slide
+						if.isTrue.data = levelfield: -1, tx_facebookopengraph_image, slide
+					  }
+					  maxW = 200
+					  maxH = 200
 					}
 				}
 			}
 			stdWrap {
 				dataWrap = http://{getIndpEnv:HTTP_HOST}/|
-				outerWrap = <meta property="og:image" content=" | "/>
-				if.isTrue.data = levelfield: -1, tx_facebookopengraph_image, slide
+				outerWrap = <meta property="og:image" content=" | "/>	
 			}
 		}
 
