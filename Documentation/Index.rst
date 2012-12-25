@@ -22,6 +22,11 @@ The content of this document is related to TYPO3, a GNU/GPL CMS/Framework availa
 .. toctree::
 	:maxdepth: 2
 
+	ProjectInformation
+	UserManual
+	AdministratorManual
+	TyposcriptReference
+
 .. STILL TO ADD IN THIS DOCUMENT
 	@todo: describe basic installation progress
 	@todo: describe how to adjust OG tags

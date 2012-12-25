@@ -1,0 +1,6 @@
+=======================
+Configuration Reference
+=======================
+
+TypoScript Reference
+=====================
