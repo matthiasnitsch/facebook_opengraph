@@ -2,8 +2,6 @@
 Users manual
 ============
 
-Target group: **Editors**
-
 The extension provides the possibility to enter values which can be read by Facebook to provide a nice preview if a user shares or likes the page.
 
 Following meta informations can be provided:
