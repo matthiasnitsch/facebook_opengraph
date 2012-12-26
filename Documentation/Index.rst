@@ -27,9 +27,6 @@ The content of this document is related to TYPO3, a GNU/GPL CMS/Framework availa
 	AdministratorManual
 	TyposcriptReference
 
-.. STILL TO ADD IN THIS DOCUMENT
-	@todo: describe how to adjust OG tags
-
 What does it do?
 =================
 

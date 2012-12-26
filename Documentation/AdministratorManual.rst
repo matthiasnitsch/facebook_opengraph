@@ -15,5 +15,3 @@ The constants editor then provides options to modify the default values for Open
 * the default image
 * the default description
 * the default admins
-
-Furthermore the constants editor provides a possibility to set an image used as watermark on every image used for an og:image tag.
