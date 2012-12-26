@@ -1,0 +1,22 @@
+plugin.tx_facebookopengraph {
+	defaults {
+
+		# cat = plugin.tx_facebookopengraph/001; type=string; label = Title
+		title =
+
+		# cat = plugin.tx_facebookopengraph/002; type=string; label = Site name
+		site_name =
+
+		# cat = plugin.tx_facebookopengraph/003; type=options[activity,sport,bar,company,cafe,hotel,restaurant,cause,sports_league,sports_team,band,government,non_profit,school,university,actor,athlete,author,director,musician,polititian,public_figure,city,country,landmark,state_province,album,book,drink,food,game,product,song,movietv_show,blog,website,article]; label = Type
+		type =
+
+		# cat = plugin.tx_facebookopengraph/004; type=string; label = Description
+		description =
+		
+		# cat = plugin.tx_facebookopengraph/file/001; type=file[png,jpg,gif]; label = Image
+		image = EXT:facebook_opengraph/Resources/Public/Images/default_image.png
+
+		# cat = plugin.tx_facebookopengraph/005; type=string; label = Admins
+		admins =
+	}
+}

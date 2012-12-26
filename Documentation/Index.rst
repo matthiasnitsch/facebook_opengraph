@@ -6,11 +6,11 @@ Facebook Open Graph
 
 :Extension name: |extension_name|
 :Extension key: |extension_key|
-:Version: x.y.z
+:Version: |version|
 :Description: manuals covering TYPO3 extension "|extension_name|"
 :Language: en
 :Author: |author|
-:Creation: 09-12-2012
+:Creation: |date|
 :Generation: |time|
 :Licence: Open Content License available from `www.opencontent.org/opl.shtml <http://www.opencontent.org/opl.shtml>`_
 
@@ -22,9 +22,10 @@ The content of this document is related to TYPO3, a GNU/GPL CMS/Framework availa
 .. toctree::
 	:maxdepth: 2
 
-.. STILL TO ADD IN THIS DOCUMENT
-	@todo: describe basic installation progress
-	@todo: describe how to adjust OG tags
+	ProjectInformation
+	UserManual
+	AdministratorManual
+	TyposcriptReference
 
 What does it do?
 =================

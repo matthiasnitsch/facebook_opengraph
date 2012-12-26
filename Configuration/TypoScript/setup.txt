@@ -1,11 +1,65 @@
 # TypoScript added by extension "facebook_opengraph"
 plugin.tx_facebookopengraph {
+	# og:title
+	title = TEXT
+	title {
+		value = {$plugin.tx_facebookopengraph.defaults.title}
+		override {
+			cObject = TEXT
+			cObject.data = levelfield: -1, tx_facebookopengraph_title, slide
+			required = 1
+		}
+	}
+  
+	#og:type
+	type = TEXT
+	type {
+		value = {$plugin.tx_facebookopengraph.defaults.type}
+		override {
+			cObject = TEXT
+			cObject.data = levelfield: -1, tx_facebookopengraph_type, slide
+			required = 1
+		}
+	}
+  
+	# og:site_name
+	site_name = TEXT
+	site_name {
+		value = {$plugin.tx_facebookopengraph.defaults.site_name}
+		override {
+			cObject = TEXT
+			cObject.data = levelfield: -1, tx_facebookopengraph_site_name, slide
+			required = 1
+		}
+	}
+  
+	# og:description
+	description = TEXT
+	description {
+		value = {$plugin.tx_facebookopengraph.defaults.description}
+		override {
+			cObject = TEXT
+			cObject.data = levelfield: -1, tx_facebookopengraph_description, slide
+			required = 1
+		}
+	}
+  
+	# og:admins
+	admins = TEXT
+	admins {
+		value = {$plugin.tx_facebookopengraph.defaults.admins}
+		override {
+			cObject = TEXT
+			cObject.data = levelfield: -1, tx_facebookopengraph_admins, slide
+			required = 1
+		}
+	}
+
 	meta = COA
 	meta {
 		# og:title
-		10 = TEXT
+		10 < plugin.tx_facebookopengraph.title
 		10 {
-			field = tx_facebookopengraph_title // title
 			stdWrap {
 				wrap = <meta property="og:title" content=" | "/>
 				required = 1
@@ -13,9 +67,8 @@ plugin.tx_facebookopengraph {
 		}
 
 		# og:type
-		20 = TEXT
+		20 < plugin.tx_facebookopengraph.type
 		20 {
-			data = levelfield: -1, tx_facebookopengraph_type, slide
 			stdWrap {
 				wrap = <meta property="og:type" content=" | "/>
 				required = 1
@@ -23,9 +76,8 @@ plugin.tx_facebookopengraph {
 		}
 
 		# og:site_name
-		30 = TEXT
+		30 < plugin.tx_facebookopengraph.site_name
 		30 {
-			data = levelfield: -1, tx_facebookopengraph_site_name, slide
 			stdWrap {
 				wrap = <meta property="og:site_name" content=" | "/>
 				required = 1
@@ -33,9 +85,8 @@ plugin.tx_facebookopengraph {
 		}
 
 		# og:description
-		40 = TEXT
+		40 < plugin.tx_facebookopengraph.description
 		40 {
-			data = levelfield: -1, tx_facebookopengraph_description, slide
 			stdWrap {
 				wrap = <meta property="og:description" content=" | "/>
 				required = 1
@@ -43,35 +94,39 @@ plugin.tx_facebookopengraph {
 		}
 
 		# og:admins
-		50 = TEXT
+		50 < plugin.tx_facebookopengraph.admins
 		50 {
-			data = levelfield: -1, tx_facebookopengraph_admins, slide
 			stdWrap {
 				wrap = <meta property="og:admins" content=" | "/>
 				required = 1
 			}
 		}
 
-
+		# og:image
 		60 = IMG_RESOURCE
 		60 {
 			file = GIFBUILDER
 			file {
 				XY = 200,200
+				backColor = #FFFFFF
+				offset = 200-[10.w]/2,200-[10.h]/2
 				10 = IMAGE
 				10 {
+					file = {$plugin.tx_facebookopengraph.defaults.image}
 					file {
 						import = uploads/tx_facebookopengraph/
-						import.data = levelfield: -1, tx_facebookopengraph_image, slide
-						width = 200
-						height = 200
+						import {
+							data = levelfield: -1, tx_facebookopengraph_image, slide
+							if.isTrue.data = levelfield: -1, tx_facebookopengraph_image, slide
+						}
+						maxW = 200
+						maxH = 200
 					}
 				}
 			}
 			stdWrap {
 				dataWrap = http://{getIndpEnv:HTTP_HOST}/|
 				outerWrap = <meta property="og:image" content=" | "/>
-				if.isTrue.data = levelfield: -1, tx_facebookopengraph_image, slide
 			}
 		}
 

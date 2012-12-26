@@ -4,15 +4,12 @@
 
 .. |author| replace:: Matthias Nitsch <nitsch@clickstorm.de>
 .. |extension_key| replace:: facebook_opengraph
-.. |extension_name| replace:: Facebook Opnen Graph
-.. |typo3| image:: Images/Typo3.png
+.. |extension_name| replace:: Facebook Open Graph
+.. |version| 1.3.x
 .. |time| date:: %m-%d-%Y %H:%M
+.. |date| date:: %m-%d-%Y
 
 ..  Custom roles
-	...................................................
-	After declaring a role like this: ".. role:: custom", the document may use the new role like :custom:`interpreted text`. 
-	Basically, this will wrap the content with a CSS class to be styled in a special way when document get rendered.
-	More information: http://docutils.sourceforge.net/docs/ref/rst/roles.html
 
 .. role:: code
 .. role:: typoscript
