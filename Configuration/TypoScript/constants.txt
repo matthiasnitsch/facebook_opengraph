@@ -18,8 +18,5 @@ plugin.tx_facebookopengraph {
 
 		# cat = plugin.tx_facebookopengraph/005; type=string; label = Admins
 		admins =
-
-		# cat = plugin.tx_facebookopengraph/enable/001; type=file[png,jpg,gif]; label = Watermark
-		watermark = 
 	}
 }
