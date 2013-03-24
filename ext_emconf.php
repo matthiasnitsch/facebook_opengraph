@@ -3,6 +3,8 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "facebook_opengraph".
  *
+ * Auto generated 24-03-2013 11:04
+ *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
  * writing. "version" and "dependencies" must not be touched!
@@ -25,7 +27,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'modify_tables' => 'pages, pages_language_overlay',
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
-	'version' => '1.3.0',
+	'version' => '1.3.1',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '4.7.0-6.0.0',
