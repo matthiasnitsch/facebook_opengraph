@@ -147,7 +147,7 @@ plugin.tx_facebookopengraph {
 	}
 }
 
-[useragent = facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)]
+[useragent = facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)] || [useragent = facebookexternalhit/1.1 (+https://www.facebook.com/externalhit_uatext.php)]
 page.headerData.1337 >
 page.headerData.1337 < plugin.tx_facebookopengraph.meta
 [global]
