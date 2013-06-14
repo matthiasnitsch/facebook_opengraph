@@ -136,11 +136,7 @@ plugin.tx_facebookopengraph {
 			typolink {
 				parameter.data = TSFE:id
 				returnLast = url
-			}
-			prepend = TEXT
-			prepend {
-				data = getIndpEnv:HTTP_HOST
-				dataWrap = http:// | /
+                forceAbsoluteUrl = 1
 			}
 			outerWrap = <meta property="og:url" content=" | "/>
 		}
