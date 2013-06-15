@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2011-10-17T20:22:37Z" product-name="version">
+		<header/>
+		<body>
+			<trans-unit id="tx_facebookopengraph_title" xml:space="preserve">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_type" xml:space="preserve">
+				<source>Typ</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_image" xml:space="preserve">
+				<source>Bild</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_site_name" xml:space="preserve">
+				<source>Sitenname</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_admins" xml:space="preserve">
+				<source>Admins</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_description" xml:space="preserve">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_type.div_activities" xml:space="preserve">
+				<source>Aktivitäten</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_type.div_business" xml:space="preserve">
+				<source>Business</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_type.div_groups" xml:space="preserve">
+				<source>Groupen</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_type.div_organizations" xml:space="preserve">
+				<source>Organizationen</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_type.div_people" xml:space="preserve">
+				<source>Menschen</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_type.div_places" xml:space="preserve">
+				<source>Orte</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_type.div_entertainment" xml:space="preserve">
+				<source>Unterhaltung</source>
+			</trans-unit>
+			<trans-unit id="tx_facebookopengraph_type.div_websites" xml:space="preserve">
+				<source>Websiten</source>
+			</trans-unit>
+			<trans-unit id="pages.tab.opengraph" xml:space="preserve">
+				<source>Open Graph</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
