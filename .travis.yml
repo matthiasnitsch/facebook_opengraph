@@ -14,8 +14,6 @@ before_script:
   - source build-environment/install-helper.sh
 
 script:
-# initial, quick inspection
-  - php build-environment/TYPO3_CodingStandards/commit_message_inspector.php $PWD/build-environment/repository
 # phplint checking on all PHP source files in extension
   - find $PWD/build-environment/repository -name *.php -exec phpLint {} --fails-on-warning --report-unused \;
 # PHPCodeSniffer code inspection with only errors displayed (no warnings)
