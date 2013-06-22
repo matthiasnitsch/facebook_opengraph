@@ -11,6 +11,7 @@ before_script:
   - export REPOSITORY="facebook_opengraph"
   - git clone https://github.com/matthiasnitsch/TYPO3-Travis-Integration.git build-environment
   - source build-environment/install-utilities.sh
+  - source build-environment/install-preserve-repository.sh
   - source build-environment/install-helper.sh
 
 script:
