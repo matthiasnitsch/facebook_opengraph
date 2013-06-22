@@ -17,4 +17,4 @@ script:
 # phplint checking on all PHP source files in extension
   - find $PWD/build-environment/repository -name *.php -exec phpLint {} --fails-on-warning --report-unused \;
 # PHPCodeSniffer code inspection with only errors displayed (no warnings)
-  - $PWD/build-environment/CodeSniffer/scripts/phpcs -n --standard=$PWD/build-environment/TYPO3_CodingStandards/ruleset.xml $PWD/build-environment/repository
+  - $PWD/build-environment/CodeSniffer/scripts/phpcs -n --standard=$PWD/build-environment/TYPO3_CodingStandard/ruleset.xml $PWD/build-environment/repository
