@@ -1,5 +1,22 @@
 language: php
+
 php:
-  - "5.5"
-  - "5.4"
-  - "5.3"
+  - 5.4
+  - 5.3
+
+env:
+  - DB=mysql
+
+before_script:
+  - export REPOSITORY="facebook_opengraph"
+  - git clone https://github.com/matthiasnitsch/TYPO3-Travis-Integration.git build-environment
+  - source build-environment/install-utilities.sh
+  - source build-environment/install-helper.sh
+
+script:
+# initial, quick inspection
+  - php build-environment/TYPO3_CodingStandards/commit_message_inspector.php $PWD/build-environment/repository
+# phplint checking on all PHP source files in extension
+  - find $PWD/build-environment/repository -name *.php -exec phpLint {} --fails-on-warning --report-unused \;
+# PHPCodeSniffer code inspection with only errors displayed (no warnings)
+  - $PWD/build-environment/CodeSniffer/scripts/phpcs -n --standard=$PWD/build-environment/TYPO3_CodingStandards/ruleset.xml $PWD/build-environment/repository
