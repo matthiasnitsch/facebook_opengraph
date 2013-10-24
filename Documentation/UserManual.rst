@@ -13,8 +13,8 @@ Following meta informations can be provided:
 
 		Added Tab to page properties
 
-		The Backend view of TYPO3 after the user has clicked on module "Page". (legend of the image)
+		The Backend view of TYPO3 after the user has clicked on module "Page".
 
 Meta tag values can be edited for every page. If a field value is not present on the actual page, the extension slides through the 
-rootline to get a value vor the field. If there is none until root-level, the given fefault value in constants.txt will be taken. 
+rootline to get a value vor the field. If there is none until root-level, the given default value in constants.txt will be taken. 
 In case of an also missing default value the meta tag will not get rendered.
