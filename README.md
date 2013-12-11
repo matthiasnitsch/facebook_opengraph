@@ -1,5 +1,5 @@
-facebook_opengraph
-==================
+Facebook Open Graph
+===================
 
 A TYPO3 extension which adds fields to the page properties to maintain Facebook Open Graph tags for every page.
 
